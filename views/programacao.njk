@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 
 {%block head%}
@@ -16,96 +16,22 @@
 </div>
 
 <section class="cards">
-    <div class="card" id="lle0NNmvIyU">
+    {% for item in items %}
+    <div class="card" id="{{item.id}}">
         <div class="card_imagens_container">
-            <img src="https://img.youtube.com/vi/lle0NNmvIyU/maxresdefault.jpg" alt="Star Wars Visions">
+            <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.tittle}}">
         </div>
 
         <div class="card_conteudo">
-            <p>Star Wars: Visions | Original Trailer | Disney+</p>
+            <p>"{{item.tittle}}"</p>
         </div>
 
         <div class="card_informacao">
-            <p>1:55 Min</p>
-            <p class="card_preco">Grátis</p>
+            <p>{{item.duration}}</p>
+            <p class="card_preco">{{item.price}}</p>
         </div>
     </div>
-
-    <div class="card" id="jjpe0nOsXVo">
-        <div class="card_imagens_container">
-            <img src="https://img.youtube.com/vi/jjpe0nOsXVo/maxresdefault.jpg" alt="Star Wars Lego">
-        </div>
-
-        <div class="card_conteudo">
-            <p>“Of the Dark Side” Official Clip | LEGO Star Wars Terrifying Tales | Disney+</p>
-        </div>
-
-        <div class="card_informacao">
-            <p>0:56 Min</p>
-            <p class="card_preco">Grátis</p>
-        </div>
-    </div>
-
-    <div class="card" id="cSKg7trjhcc">
-        <div class="card_imagens_container">
-            <img src="https://img.youtube.com/vi/cSKg7trjhcc/maxresdefault.jpg" alt="Star Wars: The Bad Batch">
-        </div>
-
-        <div class="card_conteudo">
-            <p>Mercenaries | Star Wars: The Bad Batch | Disney+</p>
-        </div>
-
-        <div class="card_informacao">
-            <p>0:30 Min</p>
-            <p class="card_preco">Grátis</p>
-        </div>
-    </div>
-
-    <div class="card" id="lJQwSrryOV8">
-        <div class="card_imagens_container">
-            <img src="https://img.youtube.com/vi/lJQwSrryOV8/maxresdefault.jpg" alt="LEGO Makes R2-D2 Even Cuter">
-        </div>
-
-        <div class="card_conteudo">
-            <p>LEGO Makes R2-D2 Even Cuter, Dok-Ondar Stops In For a Drink, and More!</p>
-        </div>
-
-        <div class="card_informacao">
-            <p>3:58 Min</p>
-            <p class="card_preco">Grátis</p>
-        </div>
-    </div>
-
-    <div class="card" id="TPeRcyJE5dk">
-        <div class="card_imagens_container">
-            <img src="https://img.youtube.com/vi/TPeRcyJE5dk/maxresdefault.jpg" alt="Characters of Star Wars ">
-        </div>
-
-        <div class="card_conteudo">
-            <p>Sskeer | Characters of Star Wars the High Republic</p>
-        </div>
-
-        <div class="card_informacao">
-            <p>1:20 Min</p>
-            <p class="card_preco">Grátis</p>
-        </div>
-    </div>
-
-    <div class="card" id="tGk3PkqLOOM">
-        <div class="card_imagens_container">
-            <img src="https://img.youtube.com/vi/tGk3PkqLOOM/maxresdefault.jpg" alt="The Mandalorian ">
-        </div>
-
-        <div class="card_conteudo">
-            <p>Season 2 Recap Sizzle | The Mandalorian | Disney+</p>
-        </div>
-
-        <div class="card_informacao">
-            <p>3:10 Min</p>
-            <p class="card_preco">Grátis</p>
-        </div>
-    </div>
-
+    {% endfor %}
 </section>
 
 

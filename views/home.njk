@@ -1,31 +1,24 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
-<title>Star Wars - Início</title>
+<title>{{home.title1}} - Início</title>
 {% endblock %}
 
 
 {% block conteudo %}
 
-
 <div id="UmNomeQualquer" class="links">
-    <img src="https://yt3.ggpht.com/ytc/AKedOLTlsg15b-HJ3OmlIDy0xDPanZzTLOmDpbzXLCzn=s900-c-k-c0x00ffffff-no-rj"
+    <img src="{{home.avatar_url}}" alt = "Imagem de {{home.title1}}"
         alt="Daniel Dantas">
-    <h1>STAR WARS</h1>
-    <h2>História:</h2>
-    <p>A série teve início com o simples título Star Wars, escrito e dirigido por George Lucas, lançado em 25 de maio de
-        1977. Na época da sua estreia se tornou a maior bilheteria de todos os tempos, arrecadando US$ 775 398 007
-        milhões de dólares e ganhando sete prêmios no Óscar.
-
-        A 20th Century Fox desacreditando um filme que ambientado no espaço, permitiu que George Lucas tivesse todos os
-        direitos do filme. O sucesso garantiu a ele dinheiro suficiente para abrir sua própria empresa cinematográfica:
-        a Lucasfilm e, o filme foi transformado em uma franquia e série, ganhando produtos derivados.</p>
+    <h1>{{home.title1}}</h1>
+    <h2>{{home.title2}}</h2>
+    <p>{{home.description}}</p>
 </div>
 
 <div id="linkMudar" class="links">
-    <a href="https://www.facebook.com/StarWars.br/" target="_blank">FACEBOOK</a>
-    <a href="https://twitter.com/starwars" target="_blank">TWITTER</a>
-    <a href="https://www.instagram.com/starwars/" target="_blank">INSTAGRAM</a>
+    {% for link in home.links %}
+        <a href="link.url" target="_blank">{{home.name}}</a>
+    {% endfor %}
 </div>
 
 {% endblock %}

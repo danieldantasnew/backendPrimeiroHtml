@@ -102,6 +102,7 @@ header{
     background-color: var(--coloryellow);
     color: var(--colorblack);
     border-radius: 20px;
+    display: grid;
 }
 
 .card_imagens_container img{
@@ -116,6 +117,7 @@ header{
 .card_informacao{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .card_preco {
