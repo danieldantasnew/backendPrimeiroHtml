@@ -21,9 +21,9 @@ server.get("/",function(req, res){
         description: 'A série teve início com o simples título Star Wars, escrito e dirigido por George Lucas, lançado em 25 de maio de 1977. Na época da sua estreia se tornou a maior bilheteria de todos os tempos, arrecadando US$ 775 398 007 milhões de dólares e ganhando sete prêmios no Óscar. A 20th Century Fox desacreditando um filme que ambientado no espaço, permitiu que George Lucas tivesse todos os direitos do filme. O sucesso garantiu a ele dinheiro suficiente para abrir sua própria empresa cinematográfica: a Lucasfilm e, o filme foi transformado em uma franquia e série, ganhando produtos derivados.',
 
         links: [
-            {name: "facebook ", url: "https://www.facebook.com/StarWars.br/"},
-            {name: "twitter", url: "https://twitter.com/starwars"},
-            {name: "instagram", url: "https://www.instagram.com/starwars/"}
+            {name: "Facebook ", url: "https://www.facebook.com/StarWars.br/"},
+            {name: "Twitter", url: "https://twitter.com/starwars"},
+            {name: "Instagram", url: "https://www.instagram.com/starwars/"}
         ]
     }
 
