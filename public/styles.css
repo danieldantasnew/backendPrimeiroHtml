@@ -71,6 +71,7 @@ header{
 
 #linkMudar{
     padding-top: 30px;
+    margin-top: 20vh;
 }
 #linkMudar a{
     color: var(--coloryellow);
@@ -87,6 +88,8 @@ header{
 #wrapper h1{
     padding: 80px;
     font-size: 46px;
+    color: var(--coloryellow);
+    text-align: center;
 }
 /*=== CARDS ===*/
 
@@ -101,13 +104,13 @@ header{
 .card{
     background-color: var(--coloryellow);
     color: var(--colorblack);
-    border-radius: 20px;
-    display: grid;
+    display: grid; 
+    
 }
 
-.card_imagens_container img{
-    width: 100%;
-    border-radius: 20px 20px 0px 0px;
+.altera{
+    border-radius: 20px;
+    /*altera as bordas apenas dos cards de programacao*/
 }
 
 .card_conteudo, .card_informacao{
@@ -127,6 +130,10 @@ header{
     border-radius: 20px;
 }
 
+.card_imagens_container img{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
 /* === MODAL === */
 
 .modal-overlay{
@@ -161,6 +168,57 @@ header{
 .modal-overlay.active{
     opacity: 1;
     visibility: visible;
+}
+
+
+/*=== FOOTER (RODAPÉ) === */
+
+.rodape{ 
+    background-color: var(--coloryellow);
+    padding: 13px;
+    color: var(--colorblack);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 16px;
+}
+
+/* === DESTAQUES === */
+
+.card_imagens_container.destaque-wrapper{
+    position: relative;
+}
+.destaque {
+    position: absolute;
+    padding: 3px;
+    background-color: rgb(9, 29, 209);
+    color: var(--colorblack);
+    border-radius: 15px;
+    right: 2px;
+    font-weight: bold;
+    top: -12px;
+}
+
+/* === VIDEO PAGE === */
+
+.video {
+    margin: 0 auto;
+    max-width: 80%;
+    height: 90%;
+}
+
+
+.card_video_container{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.card_video_container iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
 
 /*=== iframe === */

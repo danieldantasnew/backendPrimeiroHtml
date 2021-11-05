@@ -17,9 +17,12 @@
 
 <section class="cards">
     {% for item in items %}
-    <div class="card" id="{{item.id}}">
-        <div class="card_imagens_container">
+    <div class="card altera" id="{{item.id}}">
+        <div class="card_imagens_container {{ 'destaque-wrapper' if item.destaque }}">
             <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.tittle}}">
+            {% if item.destaque %}
+                <div class="destaque">Destaque</div>
+            {% endif %}
         </div>
 
         <div class="card_conteudo">
@@ -35,7 +38,7 @@
 </section>
 
 
-<div class="modal-overlay">
+<!--<div class="modal-overlay">
     <div class="modal">
         <a class="close-modal">
             <i class="material-icons">close</i>
@@ -47,7 +50,8 @@
     </div>
 
 </div>
+-->
 
-<script src="scripts.js"></script>
+<script src="/scripts.js"></script>
 
 {% endblock %}

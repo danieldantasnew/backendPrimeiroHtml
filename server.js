@@ -10,7 +10,8 @@ server.set("view engine", "njk")
 
 nunjucks.configure("views",{
     express:server,
-    autoescape: false
+    autoescape: false,
+    noCache: true
 })
 
 server.get("/",function(req, res){
@@ -35,6 +36,20 @@ server.get("/programacao",function(req, res){
     return res.render("programacao", {items: videos})
 })
 
+server.get("/video", function(req, res){
+    const id = req.query.id
+
+    const video = videos.find(function(video){
+        return video.id == id
+    })
+
+    if(!video){
+        res.send("PÁGINA NÃO ENCONTRADA")
+    }
+    /*filtrando array de videos*/
+
+    return res.render("video", {item: video})
+})
 
 server.listen(5000, function(){
 	console.log("server is running")

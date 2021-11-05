@@ -3,7 +3,8 @@ module.exports = [
         id: "lle0NNmvIyU",
         tittle: "Star Wars: Visions | Original Trailer | Disney+",
         duration: "1:55 Min",
-        price: "Grátis"
+        price: "Grátis",
+        destaque: true
     },
     {
         id: "jjpe0nOsXVo",
@@ -15,7 +16,8 @@ module.exports = [
         id: "cSKg7trjhcc",
         tittle: "Mercenaries | Star Wars: The Bad Batch | Disney+",
         duration: "0:30 Min",
-        price: "Grátis"
+        price: "Grátis",
+        destaque: true
     },
     {
         id: "lJQwSrryOV8",
@@ -27,7 +29,8 @@ module.exports = [
         id: "TPeRcyJE5dk",
         tittle: "Sskeer | Characters of Star Wars the High Republic",
         duration: "1:20 Min",
-        price: "Grátis"
+        price: "Grátis",
+        destaque: true
     },
     {
         id: "tGk3PkqLOOM",
