@@ -32,12 +32,27 @@ header{
     line-height: 14px;
     margin: 0 16px;
     text-decoration: none;
+    position: relative;
 }
 
 .links a:hover{
     color: var(--colorblack);
-    transition: color 100ms;
 }
+
+.links a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--colorblack);
+}
+.links a:hover:after{
+    width: 100%;
+    transition: width 200ms ease-in-out 0.1s;
+}
+
 
 .links h1{
     padding-top: 30px;
